@@ -14,6 +14,16 @@
     top: 5.2rem;
 }
 
+.triangulo-sem-borda {
+    width: 1px;
+    height: 1px;
+    border: solid 12px transparent;
+    border-bottom: solid 15px #000;
+    border-top: none;
+    position: absolute;
+    top: -0.9rem;
+}
+
 .triangulo-sem-borda-localizacao{
     width: 1px;
     height: 1px;

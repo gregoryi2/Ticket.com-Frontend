@@ -1,6 +1,26 @@
-export function ModalLocalizacao() {
+import { useEffect } from "react";
+import { BotaoModal } from "./components/BotaoModal";
+
+export function ModalLocalizacao({ fecharModais }: any) {
+
+    function handleCliqueFora(event:MouseEvent) {
+        const modalLocalizacao = document.getElementById('modalLocalizacao')
+
+        if(modalLocalizacao !== null && !modalLocalizacao.contains(event.target as Node)) {
+            fecharModais()
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('click', handleCliqueFora)
+
+        return () => {
+            document.removeEventListener('click', handleCliqueFora);
+          }
+    }, [])
+
     return (
-        <div className="relative top-3-5 left-60 bg-black h-72 w-96 py-5 px-7 z-20">
+        <div id="modalLocalizacao" className="relative top-3-5 left-60 bg-black h-72 w-96 py-5 px-7 z-20">
             <div className="triangulo-sem-borda-localizacao"></div>
             <h2 className="text-lg font-bold mb-10">Você está em: Ceará</h2>
 
@@ -18,9 +38,9 @@ export function ModalLocalizacao() {
                 <option value="Bahia">Caucaia</option>
             </select>
 
-            <button className="w-full bg-blue-500 text-black text-sm font-bold py-2 rounded-sm hover:opacity-90">
+            <BotaoModal>
                 TROCAR CIDADE
-            </button>
+            </BotaoModal>
 
         </div>
     )

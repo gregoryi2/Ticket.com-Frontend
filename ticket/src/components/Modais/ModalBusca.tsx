@@ -1,8 +1,26 @@
 import { Search } from "lucide-react";
+import { useEffect } from "react";
 
-export function ModalBusca() {
+export function ModalBusca({ fecharModais }:any) {
+
+    function handleCliqueFora(event:MouseEvent) {
+        const modalBusca = document.getElementById('modalBusca')
+
+        if(modalBusca !== null && !modalBusca.contains(event.target as Node)) {
+            fecharModais()
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('click', handleCliqueFora)
+
+        return () => {
+            document.removeEventListener('click', handleCliqueFora);
+          }
+    }, [])
+
     return (
-        <div className="absolute top-4-3 right-0 bg-black h-40 w-1/4 py-5 px-7 z-20">
+        <div id="modalBusca" className="absolute top-4-3 right-0 bg-black h-40 w-1/4 py-5 px-7 z-20">
             <div className="triangulo-sem-borda-busca"></div>
             <h2 className="text-lg font-bold mb-6">O que você procura?</h2>
 
