@@ -14,6 +14,10 @@
     top: 5.2rem;
 }
 
+.mt-20vh {
+    margin-top: 20vh;
+}
+
 .triangulo-sem-borda {
     width: 1px;
     height: 1px;

@@ -1,7 +1,12 @@
+"use client";
+
 import { BannerSlider } from '@/components/BannerSlider/BannerSlider';
+import { ModalTrailer } from '@/components/Modais/ModalTrailer';
 import { Navbar } from '@/components/Navbar';
+import { ModalTrailerIsOpenContext } from '@/contexts/ModalTrailerContext';
 
 import { Roboto } from 'next/font/google'
+import { useState } from 'react';
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -10,11 +15,19 @@ const roboto = Roboto({
   display: 'swap',
 })
 
+
 export default function Home() {
+
+  const [modalTrailerIsOpen, setModalTrailerIsOpen] = useState(false)
+
   return (
     <div className={`${roboto.className}`}>
       <Navbar />
-      <BannerSlider />
+
+      <ModalTrailerIsOpenContext.Provider value={{modalTrailerIsOpen, setModalTrailerIsOpen}}>
+        <BannerSlider />
+        {modalTrailerIsOpen === true ? <ModalTrailer/> : ""}
+      </ModalTrailerIsOpenContext.Provider>
     </div>
   );
 }
