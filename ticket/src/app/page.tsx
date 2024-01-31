@@ -1,6 +1,7 @@
 "use client";
 
 import { BannerSlider } from '@/components/BannerSlider/BannerSlider';
+import { EmCartaz } from '@/components/EmCartaz/EmCartaz';
 import { ModalTrailer } from '@/components/Modais/ModalTrailer';
 import { Navbar } from '@/components/Navbar';
 import { ModalTrailerIsOpenContext } from '@/contexts/ModalTrailerContext';
@@ -28,6 +29,8 @@ export default function Home() {
         <BannerSlider />
         {modalTrailerIsOpen === true ? <ModalTrailer/> : ""}
       </ModalTrailerIsOpenContext.Provider>
+
+      <EmCartaz />
     </div>
   );
 }
