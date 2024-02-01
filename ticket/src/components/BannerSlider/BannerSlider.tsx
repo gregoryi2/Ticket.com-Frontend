@@ -54,7 +54,7 @@ export function BannerSlider() {
     }
 
     return (
-        <div className="mt-28">
+        <div className="mt-28 mb-11">
             <div className="navigation-wrapper">
                 <div ref={sliderRef} className="keen-slider">
 

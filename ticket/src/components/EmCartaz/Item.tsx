@@ -22,7 +22,7 @@ export function Item({ dado }: any) {
                     <p className="text-xs ml-1">{`${dado.notaPontuacaoPublica}%`}</p>
                 </div>
 
-                <h3 className="text-left text-sm font-bold">{dado.titulo}</h3>
+                <h3 className="text-slate-300 text-left text-sm font-bold">{dado.titulo}</h3>
             </button>
         </div>
     )

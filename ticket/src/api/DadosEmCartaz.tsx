@@ -5,7 +5,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "01/02/2024",
+        preVenda: false
     },
     {
         id: 2,
@@ -13,7 +15,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: true
     },
     {
         id: 3,
@@ -21,7 +25,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
     {
         id: 4,
@@ -29,7 +35,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
     {
         id: 5,
@@ -37,7 +45,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
     {
         id: 6,
@@ -45,7 +55,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
     {
         id: 7,
@@ -53,7 +65,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
     {
         id: 8,
@@ -61,7 +75,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
     {
         id: 9,
@@ -69,7 +85,9 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
     {
         id: 10,
@@ -77,6 +95,8 @@ export const dadosEmCartaz = [
         classificacaoIndicativa: "14",
         notaTomatometro: 100,
         notaPontuacaoPublica: 100,
-        poster: "/p1.webp"
+        poster: "/p1.webp",
+        estreia: "08/02/2024",
+        preVenda: false
     },
 ]

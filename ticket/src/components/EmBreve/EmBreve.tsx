@@ -5,7 +5,7 @@ import "keen-slider/keen-slider.min.css"
 import { dadosEmCartaz } from "../../api/DadosEmCartaz"
 import { Item } from "./Item"
 
-export function EmCartaz() {
+export function EmBreve() {
 
     const [ref] = useKeenSlider<HTMLDivElement>({
         slides: {
@@ -16,9 +16,9 @@ export function EmCartaz() {
 
     return(
         
-            <div className="w-9/12 mx-auto mb-20">
+            <div className="w-9/12 mx-auto">
                 <button className="flex items-center mb-7 text-blue-400 text-lg font-bold hover:opacity-90">
-                    Em Cartaz
+                    Em Breve
                     <ChevronRight color="#0099FF" />
                 </button>
 
