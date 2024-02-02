@@ -8,8 +8,6 @@ export function Item({ dado }: any) {
 
     const dataAtual = data.toLocaleDateString()
 
-    console.log(dataAtual === dado.estreia)
-
     return (
         <div className="keen-slider__slide">
             <button>

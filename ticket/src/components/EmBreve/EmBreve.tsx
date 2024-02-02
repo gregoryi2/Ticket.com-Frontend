@@ -16,7 +16,7 @@ export function EmBreve() {
 
     return(
         
-            <div className="w-9/12 mx-auto">
+            <div className="w-9/12 mx-auto mb-32">
                 <button className="flex items-center mb-7 text-blue-400 text-lg font-bold hover:opacity-90">
                     Em Breve
                     <ChevronRight color="#0099FF" />

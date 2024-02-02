@@ -3,6 +3,7 @@
 import { BannerSlider } from '@/components/BannerSlider/BannerSlider';
 import { EmBreve } from '@/components/EmBreve/EmBreve';
 import { EmCartaz } from '@/components/EmCartaz/EmCartaz';
+import { Footer } from '@/components/Footer';
 import { ModalTrailer } from '@/components/Modais/ModalTrailer';
 import { Navbar } from '@/components/Navbar';
 import { ModalTrailerIsOpenContext } from '@/contexts/ModalTrailerContext';
@@ -34,6 +35,8 @@ export default function Home() {
       <EmCartaz />
 
       <EmBreve />
+
+      <Footer />
     </div>
   );
 }
