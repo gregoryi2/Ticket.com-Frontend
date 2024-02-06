@@ -5,13 +5,19 @@ import { ClassificacaoIndicativa } from "../ClassificacaoIndicativa";
 export function Item({ dado }: any) {
     return (
         <div className="keen-slider__slide">
-            <button>
-                <ClassificacaoIndicativa className="absolute top-2 left-2 w-1-25 h-1-25 text-0-5">
+            <button className="w-full">
+                <ClassificacaoIndicativa className="z-20 absolute top-2 left-2 w-1-25 h-1-25 text-0-5">
                     {dado.classificacaoIndicativa}
                 </ClassificacaoIndicativa>
 
-                <div className="overflow-hidden rounded-lg w-max h-max">
-                    <Image className="zoom" width={226} height={335} src={dado.poster} alt={`Poster ${dado.titulo}`} />
+                <div className="overflow-hidden rounded-lg">
+                    <Image
+                        className="zoom"
+                        src={dado.poster}
+                        width={226}
+                        height={335}
+                        style={{maxWidth:'100%', height: 'auto'}}
+                        alt={`Poster ${dado.titulo}`} />
                 </div>
 
                 <div className="flex items-center my-3">

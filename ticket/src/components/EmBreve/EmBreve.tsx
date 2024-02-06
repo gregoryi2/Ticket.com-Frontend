@@ -8,15 +8,22 @@ import { Item } from "./Item"
 export function EmBreve() {
 
     const [ref] = useKeenSlider<HTMLDivElement>({
+        breakpoints: {
+            "(min-width: 768px)": {
+                slides: { perView: 3 },
+            },
+            "(min-width: 1024px)": {
+                slides: { perView: 6, spacing: 15 },
+            },
+        },
         slides: {
-          perView: 6,
-          spacing: 15,
+          perView: 3, spacing: 10
         },
       })
 
     return(
         
-            <div className="w-9/12 mx-auto mb-32">
+            <div className="w-full lg:w-9/12 mx-5 lg:mx-auto mb-20">
                 <button className="flex items-center mb-7 text-blue-400 text-lg font-bold hover:opacity-90">
                     Em Breve
                     <ChevronRight color="#0099FF" />

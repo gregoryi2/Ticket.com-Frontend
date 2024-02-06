@@ -6,6 +6,7 @@ import { Roboto } from 'next/font/google'
 import { ModalLocalizacao } from "./Modais/ModalLocalizacao";
 import { ModalBusca } from "./Modais/ModalBusca";
 import { ModalEntreCadastreSe } from "./Modais/ModalEntreCadastreSe";
+import Image from "next/image";
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -15,6 +16,9 @@ const roboto = Roboto({
 })
 
 export function Navbar() {
+
+    let LarguraDaTela = window.innerWidth
+
     const [modalEntreCadastreSeIsOpen, setModalEntreCadastreSeIsOpen] = useState<boolean>(false)
     const [modalLocalizacaolIsOpen, setModalLocalizacaolIsOpen] = useState<boolean>(false)
     const [modalBuscaIsOpen, setModalBuscaIsOpen] = useState<boolean>(false)
@@ -39,9 +43,19 @@ export function Navbar() {
             <div className="flex justify-center py-4 bg-gradient-to-r from-blue-600 to-blue-950">
                 <div className="flex justify-between w-9/12">
                     <div className="flex justify-between gap-20">
-                        <a href="#" className="text-3xl">
-                            <strong>Ticket.com</strong>
-                        </a>
+                        {LarguraDaTela > 768 ?
+                            <a href="#" className="text-3xl">
+                                <strong>Ticket.com</strong>
+                            </a>
+                            :
+                            <Image
+                                src={"/logo.jpeg"}
+                                width={50}
+                                height={30}
+                                alt="logo"
+                                className="rounded-full"
+                            />
+                        }
 
                         <button
                             onClick={() => abrirModalLocalizacaol()} 
@@ -52,7 +66,7 @@ export function Navbar() {
                         </button>
                     </div>
 
-                    <div className="flex justify-between gap-16">
+                    <div className="flex justify-between gap-4 lg:gap-16">
                         <button
                             onClick={() => abrirModalBusca()} 
                             className="hover:opacity-80"
@@ -62,10 +76,14 @@ export function Navbar() {
 
                         <div className="flex items-center gap-3 text-xs">
                             <CircleUserRound width={33} height={33} strokeWidth={1.5}/>
-                            <button onClick={() => abrirModalEntreCadastreSe()} className="text-left hover:opacity-80 leading-4">
-                                Entre ou <br/>
-                                Cadastre-se
-                            </button>
+                            {LarguraDaTela > 768 ?
+                                <button onClick={() => abrirModalEntreCadastreSe()} className="text-left hover:opacity-80 leading-4">
+                                    Entre ou <br/>
+                                    Cadastre-se
+                                </button>
+                                :
+                                ""
+                            }
                         </div>
                     </div>
                 </div>

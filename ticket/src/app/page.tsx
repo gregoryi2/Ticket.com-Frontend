@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className={`${roboto.className}`}>
-      <Navbar />
+      <Navbar /> 
 
       <ModalTrailerIsOpenContext.Provider value={{modalTrailerIsOpen, setModalTrailerIsOpen}}>
         <BannerSlider />
